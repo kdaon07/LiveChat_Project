@@ -7,11 +7,9 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
+    extend: {},
+    colors: {
+      'editor-color': '#1E1E1E',
     },
   },
   plugins: [],

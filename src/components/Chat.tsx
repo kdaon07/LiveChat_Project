@@ -21,10 +21,9 @@ const Chat: React.FC = () => {
 
                 socketIo.on('chatUpdate', (newCode: string) => {
                     setMessages(prevMessages => {
-
                         if (prevMessages[prevMessages.length - 1] !== newCode) {
                             const updatedMessages = [...prevMessages, newCode];
-                            return updatedMessages.slice(-3); // 최근 3개의 메시지만 유지
+                            return updatedMessages;
                         }
                         return prevMessages;
                     });

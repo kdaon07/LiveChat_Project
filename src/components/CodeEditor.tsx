@@ -19,6 +19,10 @@ const CodeEditor = () => {
           console.log('Socket 연결됨');
         });
 
+        socketIo.on('initialCode', (initialCode: string) => {
+          setCode(initialCode);
+        });
+
         socketIo.on('codeUpdate', (newCode: string) => {
           setCode(newCode);
         });
